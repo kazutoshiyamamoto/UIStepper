@@ -10,9 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // ラベルのプロパティ宣言
     @IBOutlet weak var numLabel: UILabel!
     
+    // ステッパーで呼び出すメソッド
     @IBAction func changedStepperValue(_ sender: UIStepper) {
+        // ステッパーの値
+        let num = Int(sender.value)
+        // ラベルに表示する
+        numLabel.text = String(num)
     }
     
     
